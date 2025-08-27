@@ -4,69 +4,62 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HOUSEWARMING PARTY</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Manrope:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display" />
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            display: ['"Playfair Display"', 'serif'],
-            sans: ['Manrope', 'sans-serif'],
+            sans: ['"SF Pro Display"', '"SF Pro Text"', '-apple-system', 'BlinkMacSystemFont', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+          },
+          colors: {
+            appleGray: '#f5f5f7',
           },
           keyframes: {
             'fade-down': {
               '0%': { opacity: 0, transform: 'translateY(-1rem)' },
-              '100%': { opacity: 1, transform: 'translateY(0)' }
+              '100%': { opacity: 1, transform: 'translateY(0)' },
             },
             'fade-in': {
               '0%': { opacity: 0 },
-              '100%': { opacity: 1 }
+              '100%': { opacity: 1 },
             },
-            'slow-zoom': {
-              '0%': { transform: 'scale(1)' },
-              '100%': { transform: 'scale(1.1)' }
-            }
           },
           animation: {
             'fade-down': 'fade-down 1s ease-out forwards',
             'fade-in': 'fade-in 1s ease-out forwards',
-            'slow-zoom': 'slow-zoom 20s ease-in-out infinite alternate'
-          }
-        }
-      }
+          },
+        },
+      },
     }
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="font-sans text-gray-900 bg-white">
-  <header class="relative flex items-center justify-center min-h-screen overflow-hidden">
-    <img class="absolute inset-0 w-full h-full object-cover animate-slow-zoom" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1800&auto=format&fit=crop" alt="집 외관" />
-    <div class="absolute inset-0 bg-black/40"></div>
-    <h1 class="relative font-display text-white text-4xl sm:text-6xl md:text-7xl tracking-widest animate-fade-down">HOUSEWARMING PARTY</h1>
+<body class="font-sans bg-black text-white">
+  <header class="h-screen flex flex-col items-center justify-center text-center space-y-6">
+    <h1 class="text-5xl md:text-7xl font-semibold tracking-tight animate-fade-down">HOUSEWARMING PARTY</h1>
+    <p class="text-lg md:text-2xl text-gray-400 animate-fade-in">새로운 공간에서 만나요</p>
   </header>
 
-  <main class="container mx-auto px-4">
-    <section class="py-16 text-center space-y-8 animate-fade-in">
-      <p class="text-lg md:text-xl">새 집에서 첫 모임을 함께 하고 싶어요. 편하게 오셔서 좋은 추억 만들어주세요!</p>
-      <img class="rounded-xl shadow-lg mx-auto transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?q=80&w=1600&auto=format&fit=crop" alt="샘플 이미지" />
+  <main class="bg-appleGray text-gray-900">
+    <section class="max-w-5xl mx-auto py-24 px-4 text-center space-y-12 animate-fade-in">
+      <img class="w-full rounded-2xl shadow-xl" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1800&auto=format&fit=crop" alt="집 외관" />
+      <p class="text-xl">새 집에서 첫 모임을 함께 하고 싶어요. 편하게 오셔서 좋은 추억 만들어주세요!</p>
     </section>
 
-    <section class="py-16 animate-fade-in" style="animation-delay:.2s">
-      <h2 class="font-display text-2xl text-center mb-8">집 사진들</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img class="rounded-lg shadow-md transition duration-500 hover:scale-105 hover:rotate-1" src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2d8d?q=80&w=1600&auto=format&fit=crop" alt="거실 사진" />
-        <img class="rounded-lg shadow-md transition duration-500 hover:scale-105 hover:-rotate-1" src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1600&auto=format&fit=crop" alt="식탁 사진" />
-        <img class="rounded-lg shadow-md transition duration-500 hover:scale-105 hover:rotate-1" src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1600&auto=format&fit=crop" alt="침실 사진" />
+    <section class="max-w-6xl mx-auto py-24 px-4 space-y-12 animate-fade-in" style="animation-delay:.2s">
+      <div class="grid gap-6 sm:grid-cols-3">
+        <img class="rounded-xl shadow-md transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2d8d?q=80&w=1600&auto=format&fit=crop" alt="거실 사진" />
+        <img class="rounded-xl shadow-md transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1600&auto=format&fit=crop" alt="식탁 사진" />
+        <img class="rounded-xl shadow-md transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1600&auto=format&fit=crop" alt="침실 사진" />
       </div>
     </section>
   </main>
 
-  <footer class="text-center py-16 space-y-2 text-sm animate-fade-in" style="animation-delay:.4s">
-    <p class="tracking-widest">OCTOBER 4, 2025 · 4:00 PM</p>
+  <footer class="bg-black text-gray-400 text-center py-16 space-y-2 animate-fade-in" style="animation-delay:.4s">
+    <p class="tracking-widest text-white">OCTOBER 4, 2025 · 4:00 PM</p>
     <p>123 TEHERAN-RO, GANGNAM-GU, SEOUL</p>
-    <p class="pt-4 text-xs text-gray-500">© 2025 Housewarming</p>
+    <p class="pt-4 text-xs">© 2025 Housewarming</p>
   </footer>
 </body>
 </html>
