@@ -3,40 +3,63 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>집들이 초대장</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css" />
+  <title>HOUSEWARMING PARTY</title>
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"SF Pro Display"', '"SF Pro Text"', '-apple-system', 'BlinkMacSystemFont', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+          },
+          colors: {
+            appleGray: '#f5f5f7',
+          },
+          keyframes: {
+            'fade-down': {
+              '0%': { opacity: 0, transform: 'translateY(-1rem)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+            'fade-in': {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 },
+            },
+          },
+          animation: {
+            'fade-down': 'fade-down 1s ease-out forwards',
+            'fade-in': 'fade-in 1s ease-out forwards',
+          },
+        },
+      },
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header class="hero">
-    <img class="hero-img" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1800&auto=format&fit=crop" alt="집 외관" />
-    <div class="overlay">
-      <h1 class="title">우리 집들이에 초대합니다</h1>
-      <p class="time">2025년 10월 4일 토요일 · 오후 4시</p>
-      <p class="address">서울특별시 강남구 테헤란로 123, 101동 1001호</p>
-    </div>
+<body class="font-sans bg-black text-white">
+  <header class="h-screen flex flex-col items-center justify-center text-center space-y-6">
+    <h1 class="text-5xl md:text-7xl font-semibold tracking-tight animate-fade-down">HOUSEWARMING PARTY</h1>
+    <p class="text-lg md:text-2xl text-gray-400 animate-fade-in">새로운 공간에서 만나요</p>
   </header>
 
-  <main>
-    <section class="intro container">
-      <p class="lead">새 집에서 첫 모임을 함께 하고 싶어요. 편하게 오셔서 좋은 추억 만들어주세요!</p>
-      <img class="sample" src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?q=80&w=1600&auto=format&fit=crop" alt="샘플 이미지" />
+  <main class="bg-appleGray text-gray-900">
+    <section class="max-w-5xl mx-auto py-24 px-4 text-center space-y-12 animate-fade-in">
+      <img class="w-full rounded-2xl shadow-xl" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1800&auto=format&fit=crop" alt="집 외관" />
+      <p class="text-xl">새 집에서 첫 모임을 함께 하고 싶어요. 편하게 오셔서 좋은 추억 만들어주세요!</p>
     </section>
 
-    <section class="gallery container">
-      <h2>집 사진들</h2>
-      <div class="photos">
-        <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2d8d?q=80&w=1600&auto=format&fit=crop" alt="거실 사진" />
-        <img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1600&auto=format&fit=crop" alt="식탁 사진" />
-        <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1600&auto=format&fit=crop" alt="침실 사진" />
+    <section class="max-w-6xl mx-auto py-24 px-4 space-y-12 animate-fade-in" style="animation-delay:.2s">
+      <div class="grid gap-6 sm:grid-cols-3">
+        <img class="rounded-xl shadow-md transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2d8d?q=80&w=1600&auto=format&fit=crop" alt="거실 사진" />
+        <img class="rounded-xl shadow-md transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1600&auto=format&fit=crop" alt="식탁 사진" />
+        <img class="rounded-xl shadow-md transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1600&auto=format&fit=crop" alt="침실 사진" />
       </div>
     </section>
   </main>
 
-  <footer class="footer container">
-    <p>© 2025 Housewarming</p>
+  <footer class="bg-black text-gray-400 text-center py-16 space-y-2 animate-fade-in" style="animation-delay:.4s">
+    <p class="tracking-widest text-white">OCTOBER 4, 2025 · 4:00 PM</p>
+    <p>123 TEHERAN-RO, GANGNAM-GU, SEOUL</p>
+    <p class="pt-4 text-xs">© 2025 Housewarming</p>
   </footer>
 </body>
 </html>
