@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f0f10" />
+  <title>집들이 파티 초대장</title>
+  <meta name="description" content="우리 집들이 파티에 초대합니다! 날짜, 위치, RSVP를 확인하세요." />
+
+  <!-- Webfont -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600..900&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner container">
+      <p class="label">Housewarming</p>
+      <h1 class="display">우리 집들이 파티</h1>
+      <p class="sub">2025년 10월 4일 토요일 · 오후 4시</p>
+      <div class="countdown" aria-live="polite">
+        <div><span id="d">00</span><small>Days</small></div>
+        <div><span id="h">00</span><small>Hours</small></div>
+        <div><span id="m">00</span><small>Min</small></div>
+        <div><span id="s">00</span><small>Sec</small></div>
+      </div>
+      <div class="cta">
+        <button class="btn primary" data-scroll-to="#rsvp">RSVP 하기</button>
+        <button class="btn ghost" data-scroll-to="#details">자세히 보기</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="details" class="section container">
+      <div class="grid two">
+        <div>
+          <h2 class="h">파티 정보</h2>
+          <ul class="info">
+            <li><strong>일시</strong> 2025-10-04 (토) 16:00 ~ 21:00</li>
+            <li>
+              <strong>주소</strong>
+              <span id="address-text">서울특별시 강남구 테헤란로 123, 101동 1001호</span>
+              <div class="actions-row">
+                <button class="btn sm" id="copy-address">주소 복사</button>
+                <a class="btn sm" target="_blank" rel="noopener" id="open-maps" href="https://maps.google.com/?q=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%ED%85%8C%ED%97%A4%EB%9E%80%EB%A1%9C%20123%2C%20101%EB%8F%99%201001%ED%98%B8">지도 열기</a>
+                <button class="btn sm" id="add-to-calendar">캘린더 추가</button>
+              </div>
+            </li>
+            <li><strong>드레스코드</strong> 편안한 스마트 캐주얼</li>
+            <li><strong>참고</strong> 간단한 음식과 음료가 준비됩니다</li>
+          </ul>
+        </div>
+        <div class="map-wrap">
+          <iframe title="지도" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%ED%85%8C%ED%97%A4%EB%9E%80%EB%A1%9C%20123%2C%20101%EB%8F%99%201001%ED%98%B8&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2 class="h">집들이 미리보기</h2>
+      </div>
+      <div class="carousel" id="carousel" aria-label="사진 갤러리">
+        <div class="slides">
+          <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2d8d?q=80&w=1600&auto=format&fit=crop" alt="밝은 거실 샘플" />
+          <img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1600&auto=format&fit=crop" alt="식탁과 조명 샘플" />
+          <img src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?q=80&w=1600&auto=format&fit=crop" alt="주방 샘플" />
+          <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1600&auto=format&fit=crop" alt="침실 샘플" />
+        </div>
+        <div class="dots" id="dots" role="tablist" aria-label="슬라이드 내비게이션"></div>
+      </div>
+    </section>
+
+    <section id="rsvp" class="section container">
+      <div class="grid two">
+        <div>
+          <h2 class="h">RSVP</h2>
+          <p class="muted">참석 여부를 알려주세요. 인원 수와 간단한 메모도 환영입니다!</p>
+          <form id="rsvp-form" novalidate>
+            <div class="field">
+              <label for="name">이름</label>
+              <input id="name" name="name" type="text" placeholder="홍길동" required />
+              <small class="error" data-for="name"></small>
+            </div>
+            <div class="field">
+              <label for="count">인원 수</label>
+              <input id="count" name="count" type="number" min="1" max="10" value="1" required />
+              <small class="error" data-for="count"></small>
+            </div>
+            <div class="field">
+              <label for="note">메모</label>
+              <textarea id="note" name="note" rows="3" placeholder="알레르기나 요청 사항이 있다면 적어주세요"></textarea>
+            </div>
+            <div class="field inline">
+              <label class="switch">
+                <input type="checkbox" id="attend" checked />
+                <span>참석합니다</span>
+              </label>
+            </div>
+            <button class="btn primary full" type="submit">제출</button>
+          </form>
+        </div>
+        <div>
+          <div class="card">
+            <h3 class="card-title">작은 선물 가이드</h3>
+            <p class="muted">부담 갖지 마세요! 꽃, 캔들, 와인 한 병이면 충분해요 :)</p>
+            <ul class="tick">
+              <li>실내용 식물 환영</li>
+              <li>향이 강하지 않은 캔들</li>
+              <li>와인은 드라이 화이트/레드</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>© 2025 Housewarming · 만든이: JW</p>
+    <a href="#top" class="top" data-scroll-to="#top">맨 위로</a>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
