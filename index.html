@@ -23,22 +23,40 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
   <body class="bg-cream text-gray-900 font-serif antialiased scroll-smooth">
-    <header class="relative h-screen bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1920&auto=format&fit=crop');">
-      <div class="absolute inset-0 bg-black/40"></div>
+    <header class="relative h-screen overflow-hidden">
+      <video class="absolute inset-0 w-full h-full object-cover" src="https://cdn.coverr.co/videos/coverr-lake-woods-1560272973467?download=1" autoplay muted loop playsinline></video>
+      <div class="absolute inset-0 bg-black/30"></div>
+      <a href="#" class="absolute top-4 left-4 w-10 h-10 border border-white rounded-full flex items-center justify-center text-white text-xs">HF</a>
       <div class="relative z-10 flex items-center justify-center h-full">
-        <h1 data-animate class="text-5xl md:text-7xl tracking-tight text-white opacity-0 translate-y-6 transition-all duration-1000">Housewarming Party</h1>
+        <h1 data-animate class="text-6xl md:text-8xl tracking-tight text-white opacity-0 translate-y-6 transition-all duration-1000">Housewarming</h1>
       </div>
     </header>
 
     <main>
-      <section data-animate class="max-w-3xl mx-auto py-20 px-6 text-center opacity-0 translate-y-6 transition-all duration-1000">
-        <p class="text-lg md:text-xl font-sans">새 집에서 첫 모임을 함께 하고 싶어요. 편하게 오셔서 좋은 추억 만들어주세요!</p>
+      <section data-animate class="py-24">
+        <ul class="max-w-4xl mx-auto text-center md:text-left space-y-8 text-5xl md:text-7xl leading-tight">
+          <li class="flex items-baseline justify-center md:justify-between gap-6 opacity-0 translate-y-6 transition-all duration-1000" data-animate><span>Serenity</span><span class="text-xl text-gray-400">I</span></li>
+          <li class="flex items-baseline justify-center md:justify-between gap-6 opacity-0 translate-y-6 transition-all duration-1000" data-animate><span>Harbor</span><span class="text-xl text-gray-400">II</span></li>
+          <li class="flex items-baseline justify-center md:justify-between gap-6 opacity-0 translate-y-6 transition-all duration-1000" data-animate><span>Vista</span><span class="text-xl text-gray-400">III</span></li>
+          <li class="flex items-baseline justify-center md:justify-between gap-6 opacity-0 translate-y-6 transition-all duration-1000" data-animate><span>Bloom</span><span class="text-xl text-gray-400">IV</span></li>
+          <li class="flex items-baseline justify-center md:justify-between gap-6 opacity-0 translate-y-6 transition-all duration-1000" data-animate><span>Joy</span><span class="text-xl text-gray-400">V</span></li>
+        </ul>
       </section>
 
-      <section class="grid grid-cols-1 md:grid-cols-3 gap-2">
-        <img data-animate src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2d8d?q=80&w=1600&auto=format&fit=crop" alt="거실 사진" class="w-full h-96 object-cover opacity-0 scale-95 transition-all duration-1000 hover:scale-105" />
-        <img data-animate src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1600&auto=format&fit=crop" alt="식탁 사진" class="w-full h-96 object-cover opacity-0 scale-95 transition-all duration-1000 hover:scale-105" />
-        <img data-animate src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1600&auto=format&fit=crop" alt="침실 사진" class="w-full h-96 object-cover opacity-0 scale-95 transition-all duration-1000 hover:scale-105" />
+      <section data-animate class="py-24">
+        <div class="max-w-5xl mx-auto px-6">
+          <div class="flex justify-between items-center mb-16">
+            <a href="#" class="px-4 py-2 border rounded-full text-sm">&larr; Previous</a>
+            <span class="text-sm">VI</span>
+            <a href="#" class="px-4 py-2 border rounded-full text-sm">Next &rarr;</a>
+          </div>
+          <h2 class="text-center text-4xl mb-8">Joy</h2>
+          <p class="text-center max-w-3xl mx-auto mb-16 font-sans">A bright, airy retreat that celebrates light and space with understated grace.</p>
+          <div class="grid gap-8 md:grid-cols-2">
+            <img data-animate src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2d8d?q=80&w=1600&auto=format&fit=crop" alt="Interior view" class="w-full h-96 object-cover opacity-0 scale-95 transition-all duration-1000" />
+            <img data-animate src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1600&auto=format&fit=crop" alt="Room view" class="w-full h-96 object-cover opacity-0 scale-95 transition-all duration-1000" />
+          </div>
+        </div>
       </section>
     </main>
 
