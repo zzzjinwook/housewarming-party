@@ -22,66 +22,72 @@
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-  <body class="bg-cream text-gray-900 font-serif antialiased scroll-smooth">
-    <header class="relative h-screen overflow-hidden">
-      <video class="absolute inset-0 w-full h-full object-cover" src="https://cdn.coverr.co/videos/coverr-lake-woods-1560272973467?download=1" autoplay muted loop playsinline></video>
-      <div class="absolute inset-0 bg-black/30"></div>
-      <a href="#" class="absolute top-4 left-4 w-10 h-10 border border-white rounded-full flex items-center justify-center text-white text-xs">HF</a>
-      <div class="relative z-10 flex items-center justify-center h-full">
-        <h1 data-animate class="text-6xl md:text-8xl tracking-tight text-white opacity-0 translate-y-6 transition-all duration-1000">Housewarming</h1>
+<body class="bg-cream text-gray-900 font-serif antialiased scroll-smooth">
+  <header class="relative h-screen overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" alt="Cozy living room" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/30"></div>
+    <a href="#" class="absolute top-4 left-4 w-10 h-10 border border-white rounded-full flex items-center justify-center text-white text-xs">HF</a>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full space-y-6 text-center">
+      <h1 data-animate class="text-5xl md:text-7xl tracking-tight text-white opacity-0 translate-y-6 transition-all duration-1000">Housewarming</h1>
+      <a href="#details" class="px-6 py-3 border border-white rounded-full text-white text-sm font-sans">자세히 보기</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="details" data-animate class="py-24 px-6 text-center opacity-0 translate-y-6 transition-all duration-1000">
+      <h2 class="text-4xl mb-6">집들이에 초대합니다</h2>
+      <p class="max-w-2xl mx-auto mb-8 font-sans">새로운 보금자리에서 즐거운 시간을 함께해요. 맛있는 음식과 좋은 음악, 따뜻한 분위기를 준비했어요.</p>
+      <div class="space-y-2 font-sans">
+        <p>📍 구로동 799-18, 201호</p>
+        <p>🕔 9월 6일 17시</p>
       </div>
-    </header>
+      <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4 font-sans">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=%EA%B5%AC%EB%A1%9C%EB%8F%99+799-18+201%ED%98%B8" target="_blank" class="px-6 py-3 border rounded-full text-sm">길찾기</a>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Housewarming%20Party&dates=20240906T080000Z/20240906T100000Z&details=Join%20us%20for%20a%20housewarming!&location=%EA%B5%AC%EB%A1%9C%EB%8F%99%20799-18%2C%20201%ED%98%B8" target="_blank" class="px-6 py-3 border rounded-full text-sm">캘린더에 추가</a>
+      </div>
+    </section>
 
-    <main>
-      <section data-animate class="py-24">
-        <ul class="max-w-4xl mx-auto text-center md:text-left space-y-8 text-5xl md:text-7xl leading-tight">
-          <li class="flex items-baseline justify-center md:justify-between gap-6 opacity-0 translate-y-6 transition-all duration-1000" data-animate><span>Serenity</span><span class="text-xl text-gray-400">I</span></li>
-          <li class="flex items-baseline justify-center md:justify-between gap-6 opacity-0 translate-y-6 transition-all duration-1000" data-animate><span>Harbor</span><span class="text-xl text-gray-400">II</span></li>
-          <li class="flex items-baseline justify-center md:justify-between gap-6 opacity-0 translate-y-6 transition-all duration-1000" data-animate><span>Vista</span><span class="text-xl text-gray-400">III</span></li>
-          <li class="flex items-baseline justify-center md:justify-between gap-6 opacity-0 translate-y-6 transition-all duration-1000" data-animate><span>Bloom</span><span class="text-xl text-gray-400">IV</span></li>
-          <li class="flex items-baseline justify-center md:justify-between gap-6 opacity-0 translate-y-6 transition-all duration-1000" data-animate><span>Joy</span><span class="text-xl text-gray-400">V</span></li>
-        </ul>
-      </section>
+    <section id="gallery" data-animate class="py-24 opacity-0 translate-y-6 transition-all duration-1000">
+      <h2 class="text-center text-4xl mb-12">Gallery</h2>
+      <div class="max-w-5xl mx-auto grid gap-4 md:grid-cols-2">
+        <img data-animate src="https://images.unsplash.com/photo-1601047541717-7df63e9e6fb9?auto=format&fit=crop&w=1600&q=80" alt="Dining table ready for guests" class="w-full h-72 md:h-96 object-cover opacity-0 scale-95 transition-all duration-1000" loading="lazy" />
+        <img data-animate src="https://images.unsplash.com/photo-1586105251261-72a756497a12?auto=format&fit=crop&w=1600&q=80" alt="Cozy kitchen area" class="w-full h-72 md:h-96 object-cover opacity-0 scale-95 transition-all duration-1000" loading="lazy" />
+        <img data-animate src="https://images.unsplash.com/photo-1574643143683-23a1ce6d5ed0?auto=format&fit=crop&w=1600&q=80" alt="Decorated living room corner" class="w-full h-72 md:h-96 object-cover opacity-0 scale-95 transition-all duration-1000" loading="lazy" />
+        <img data-animate src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?auto=format&fit=crop&w=1600&q=80" alt="Bright bedroom" class="w-full h-72 md:h-96 object-cover opacity-0 scale-95 transition-all duration-1000" loading="lazy" />
+      </div>
+    </section>
 
-      <section data-animate class="py-24">
-        <div class="max-w-5xl mx-auto px-6">
-          <div class="flex justify-between items-center mb-16">
-            <a href="#" class="px-4 py-2 border rounded-full text-sm">&larr; Previous</a>
-            <span class="text-sm">VI</span>
-            <a href="#" class="px-4 py-2 border rounded-full text-sm">Next &rarr;</a>
-          </div>
-          <h2 class="text-center text-4xl mb-8">Joy</h2>
-          <p class="text-center max-w-3xl mx-auto mb-16 font-sans">A bright, airy retreat that celebrates light and space with understated grace.</p>
-          <div class="grid gap-8 md:grid-cols-2">
-            <img data-animate src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2d8d?q=80&w=1600&auto=format&fit=crop" alt="Interior view" class="w-full h-96 object-cover opacity-0 scale-95 transition-all duration-1000" />
-            <img data-animate src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1600&auto=format&fit=crop" alt="Room view" class="w-full h-96 object-cover opacity-0 scale-95 transition-all duration-1000" />
-          </div>
-        </div>
-      </section>
-    </main>
+    <section id="map" data-animate class="py-24 px-6 opacity-0 translate-y-6 transition-all duration-1000">
+      <h2 class="text-center text-4xl mb-8">찾아오시는 길</h2>
+      <div class="max-w-4xl mx-auto">
+        <iframe class="w-full h-96 border-0" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=%EA%B5%AC%EB%A1%9C%EB%8F%99%20799-18%20201%ED%98%B8&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+      </div>
+    </section>
+  </main>
 
-    <footer data-animate class="text-center py-16 space-y-2 text-sm font-sans opacity-0 translate-y-6 transition-all duration-1000">
-      <p>OCTOBER 4, 2025 · 4:00 PM</p>
-      <p>123 TEHERAN-RO, GANGNAM-GU, SEOUL</p>
-      <p class="pt-4 text-xs">© 2025 Housewarming</p>
-    </footer>
+  <footer data-animate class="text-center py-16 space-y-2 text-sm font-sans opacity-0 translate-y-6 transition-all duration-1000">
+    <p>2024년 9월 6일 · 오후 5시</p>
+    <p>구로동 799-18, 201호</p>
+    <p class="pt-4 text-xs">© 2024 Housewarming</p>
+  </footer>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const observer = new IntersectionObserver(
-          entries => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                entry.target.classList.remove('opacity-0', 'translate-y-6', 'scale-95');
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.1 }
-        );
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.remove('opacity-0', 'translate-y-6', 'scale-95');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
 
-        document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-      });
-    </script>
-  </body>
+      document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
 </html>
+
