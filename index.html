@@ -4,30 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HOUSEWARMING PARTY</title>
-  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"SF Pro Display"', '"SF Pro Text"', '-apple-system', 'BlinkMacSystemFont', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Roboto', 'sans-serif'],
           },
           colors: {
-            appleGray: '#f5f5f7',
-          },
-          keyframes: {
-            'fade-down': {
-              '0%': { opacity: 0, transform: 'translateY(-1rem)' },
-              '100%': { opacity: 1, transform: 'translateY(0)' },
-            },
-            'fade-in': {
-              '0%': { opacity: 0 },
-              '100%': { opacity: 1 },
-            },
-          },
-          animation: {
-            'fade-down': 'fade-down 1s ease-out forwards',
-            'fade-in': 'fade-in 1s ease-out forwards',
+            cream: '#f8f5f2',
           },
         },
       },
@@ -35,31 +22,48 @@
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="font-sans bg-black text-white">
-  <header class="h-screen flex flex-col items-center justify-center text-center space-y-6">
-    <h1 class="text-5xl md:text-7xl font-semibold tracking-tight animate-fade-down">HOUSEWARMING PARTY</h1>
-    <p class="text-lg md:text-2xl text-gray-400 animate-fade-in">새로운 공간에서 만나요</p>
-  </header>
-
-  <main class="bg-appleGray text-gray-900">
-    <section class="max-w-5xl mx-auto py-24 px-4 text-center space-y-12 animate-fade-in">
-      <img class="w-full rounded-2xl shadow-xl" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1800&auto=format&fit=crop" alt="집 외관" />
-      <p class="text-xl">새 집에서 첫 모임을 함께 하고 싶어요. 편하게 오셔서 좋은 추억 만들어주세요!</p>
-    </section>
-
-    <section class="max-w-6xl mx-auto py-24 px-4 space-y-12 animate-fade-in" style="animation-delay:.2s">
-      <div class="grid gap-6 sm:grid-cols-3">
-        <img class="rounded-xl shadow-md transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2d8d?q=80&w=1600&auto=format&fit=crop" alt="거실 사진" />
-        <img class="rounded-xl shadow-md transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1600&auto=format&fit=crop" alt="식탁 사진" />
-        <img class="rounded-xl shadow-md transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1600&auto=format&fit=crop" alt="침실 사진" />
+  <body class="bg-cream text-gray-900 font-serif antialiased scroll-smooth">
+    <header class="relative h-screen bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1920&auto=format&fit=crop');">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="relative z-10 flex items-center justify-center h-full">
+        <h1 data-animate class="text-5xl md:text-7xl tracking-tight text-white opacity-0 translate-y-6 transition-all duration-1000">Housewarming Party</h1>
       </div>
-    </section>
-  </main>
+    </header>
 
-  <footer class="bg-black text-gray-400 text-center py-16 space-y-2 animate-fade-in" style="animation-delay:.4s">
-    <p class="tracking-widest text-white">OCTOBER 4, 2025 · 4:00 PM</p>
-    <p>123 TEHERAN-RO, GANGNAM-GU, SEOUL</p>
-    <p class="pt-4 text-xs">© 2025 Housewarming</p>
-  </footer>
-</body>
+    <main>
+      <section data-animate class="max-w-3xl mx-auto py-20 px-6 text-center opacity-0 translate-y-6 transition-all duration-1000">
+        <p class="text-lg md:text-xl font-sans">새 집에서 첫 모임을 함께 하고 싶어요. 편하게 오셔서 좋은 추억 만들어주세요!</p>
+      </section>
+
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-2">
+        <img data-animate src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2d8d?q=80&w=1600&auto=format&fit=crop" alt="거실 사진" class="w-full h-96 object-cover opacity-0 scale-95 transition-all duration-1000 hover:scale-105" />
+        <img data-animate src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1600&auto=format&fit=crop" alt="식탁 사진" class="w-full h-96 object-cover opacity-0 scale-95 transition-all duration-1000 hover:scale-105" />
+        <img data-animate src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1600&auto=format&fit=crop" alt="침실 사진" class="w-full h-96 object-cover opacity-0 scale-95 transition-all duration-1000 hover:scale-105" />
+      </section>
+    </main>
+
+    <footer data-animate class="text-center py-16 space-y-2 text-sm font-sans opacity-0 translate-y-6 transition-all duration-1000">
+      <p>OCTOBER 4, 2025 · 4:00 PM</p>
+      <p>123 TEHERAN-RO, GANGNAM-GU, SEOUL</p>
+      <p class="pt-4 text-xs">© 2025 Housewarming</p>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver(
+          entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.remove('opacity-0', 'translate-y-6', 'scale-95');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+      });
+    </script>
+  </body>
 </html>
