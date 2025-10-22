@@ -46,14 +46,16 @@ function copyGmail() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector('.more-link').addEventListener('click', function (e) {
-        e.preventDefault();
-        var arrow = document.getElementById('txt-arrow');
-        var detailInfo = document.querySelector('.detail-info');
-
-        arrow.classList.toggle('rotate');
-        detailInfo.classList.toggle('show');
-    });
+    const moreLink = document.querySelector('.more-link');
+    if (moreLink) {
+        moreLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            var arrow = document.getElementById('txt-arrow');
+            var detailInfo = document.querySelector('.detail-info');
+            if (arrow) arrow.classList.toggle('rotate');
+            if (detailInfo) detailInfo.classList.toggle('show');
+        });
+    }
 });
 
 // Calendar helpers
