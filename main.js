@@ -36,7 +36,7 @@ function copyGmail() {
     var originalText = gmailLink.innerHTML;
 
     navigator.clipboard.writeText('zzzjinwook98@gmail.com').then(function() {
-        gmailLink.innerHTML = '복사완료!';
+        gmailLink.innerHTML = 'コピーしました！';
         setTimeout(function() {
             gmailLink.innerHTML = originalText;
         }, 2000);
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const endISO = dtEl.getAttribute('data-end');
     const title = 'Housewarming Party';
     const location = locEl.textContent.trim();
-    const description = '집들이에 초대합니다.';
+    const description = 'ホームパーティーへご招待';
 
     // Prepare ICS file
     try {
